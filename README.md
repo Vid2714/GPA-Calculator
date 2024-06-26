@@ -4,8 +4,7 @@
 This project is a web-based GPA (Grade Point Average) and CGPA (Cumulative Grade Point Average) calculator designed for students. It provides an easy-to-use interface for calculating semester GPAs and tracking overall academic performance through CGPA calculation.
 
 ## Demo
-Check out the live demo of the GPA and CGPA Calculator:
-[https://yourusername.github.io/gpa-cgpa-calculator](https://yourusername.github.io/gpa-cgpa-calculator)
+Check out the live demo of the [GPA and CGPA Calculator](https://vid2714.github.io/GPA-Calculator/)
 
 ## Features
 - Calculate GPA for individual semesters
@@ -25,9 +24,9 @@ Check out the live demo of the GPA and CGPA Calculator:
 ## How to Use
 
 ### Online Version
-You can use the calculator directly through our GitHub Pages deployment:
+You can use the calculator directly through my GitHub Pages deployment:
 
-[https://yourusername.github.io/gpa-cgpa-calculator](https://yourusername.github.io/gpa-cgpa-calculator)
+[GPA and CGPA Calculator](https://vid2714.github.io/GPA-Calculator/)
 
 ### Local Usage
 If you prefer to run the calculator locally:
