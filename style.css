@@ -1,0 +1,34 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #324f78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #86a6de;
+  color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+button{
+  border-radius: 8px;
+  background-color: #5067aa;
+  color: #f8f8f8;
+}
+input, select {
+  margin: 5px;
+}
+#num-courses{
+  width: 60px;
+  border-radius: 10px;
+}
+#result {
+  font-weight: bold;
+  font-size: 2em;
+}
