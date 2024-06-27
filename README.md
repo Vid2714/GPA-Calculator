@@ -47,3 +47,4 @@ If you prefer to run the calculator locally:
 No installation is required. Simply clone the repository and open the HTML file in a web browser.
 
 PS: Hope I don't get a copyright from Queen😁
+"# GPA-Calculator" 
