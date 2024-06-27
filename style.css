@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Helvetica, Arial,sans-serif;
   background-color: #324f78;
   display: flex;
   justify-content: center;
@@ -9,27 +9,63 @@ body {
 }
 
 .container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px;
+}
+
+h1 {
+  color: #f8f8f8;
+  text-align: center;
+}
+
+.calculator-box {
   background-color: #86a6de;
   color: #f8f8f8;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 20px;
+  margin-bottom: 20px;
 }
-button{
+
+button {
   border-radius: 8px;
   background-color: #5067aa;
   color: #f8f8f8;
+  margin: 5px;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
 }
+
 input, select {
   margin: 5px;
 }
-input{
-  width: 60px;
-  border-radius: 10px;
+
+input {
+  width: 100px;
+  border-radius: 7px;
+  padding: 5px;
+  border: 1px solid #5067aa;
 }
-#result {
+
+#gpa-result, #cgpa-result {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+label{
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-md-6 {
+    width: 48%;
+  }
 }
