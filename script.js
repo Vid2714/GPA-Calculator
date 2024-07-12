@@ -56,9 +56,9 @@ function calculateGPA() {
   document.getElementById('gpa-result').textContent = `Your GPA is: ${gpa.toFixed(2)}`;
 
   // Trigger confetti
-  throwConfetti(gpa);
+  throwConfetti();
   
-  playChampions();
+  playChampions(gpa);
 }
 
 function addSemester() {
@@ -122,18 +122,30 @@ function throwConfetti() {
     }
   }());
 }
-
+let currentAudio = null;
 function playChampions(gpa) {
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
   let audio;
   if(gpa>6){
     audio = document.getElementById('championsAudio');
+    const missionPassedDiv = document.getElementById('mission-passed');
+    missionPassedDiv.classList.add('show');
+    setTimeout(() => {
+      missionPassedDiv.classList.remove('show');
+    }, 6500);
   }
   else{
     audio = document.getElementById('kolaveri');
   }
-  
-  audio.play();
+  if (audio) {
+    audio.play();
+    currentAudio = audio;
+  } else {
+    console.error("Audio element not found");
+  }
 }
-
 // Add initial semester
 addSemester();
