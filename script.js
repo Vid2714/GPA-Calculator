@@ -56,8 +56,8 @@ function calculateGPA() {
   document.getElementById('gpa-result').textContent = `Your GPA is: ${gpa.toFixed(2)}`;
 
   // Trigger confetti
-  throwConfetti();
-
+  throwConfetti(gpa);
+  
   playChampions();
 }
 
@@ -93,7 +93,7 @@ function calculateCGPA() {
   // Trigger confetti
   throwConfetti();
 
-  playChampions();
+  playChampions(cgpa);
 }
 
 function throwConfetti() {
@@ -123,8 +123,15 @@ function throwConfetti() {
   }());
 }
 
-function playChampions() {
-  const audio = document.getElementById('championsAudio');
+function playChampions(gpa) {
+  let audio;
+  if(gpa>6){
+    audio = document.getElementById('championsAudio');
+  }
+  else{
+    audio = document.getElementById('kolaveri');
+  }
+  
   audio.play();
 }
 
