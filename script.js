@@ -54,9 +54,6 @@ function calculateGPA() {
 
   const gpa = totalGradePoints / totalCredits;
   document.getElementById('gpa-result').textContent = `Your GPA is: ${gpa.toFixed(2)}`;
-
-  // Trigger confetti
-  throwConfetti();
   
   playChampions(gpa);
 }
@@ -90,9 +87,6 @@ function calculateCGPA() {
   const cgpa = totalCredits > 0 ? totalGradePoints / totalCredits : 0;
   document.getElementById('cgpa-result').textContent = `Your CGPA is: ${cgpa.toFixed(2)}`;
 
-  // Trigger confetti
-  throwConfetti();
-
   playChampions(cgpa);
 }
 
@@ -124,12 +118,14 @@ function throwConfetti() {
 }
 let currentAudio = null;
 function playChampions(gpa) {
+  // Trigger confetti
+  throwConfetti();
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
   let audio;
-  if(gpa>6){
+  if(gpa>=7.5){
     audio = document.getElementById('championsAudio');
     const missionPassedDiv = document.getElementById('mission-passed');
     missionPassedDiv.classList.add('show');
